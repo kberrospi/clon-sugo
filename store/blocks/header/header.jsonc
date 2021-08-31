@@ -8,8 +8,7 @@
   "header-layout.desktop": {
     "children": [
       "flex-layout.row#1-desktop",
-      "flex-layout.row#2-desktop",
-      "flex-layout.row#3-desktop",
+     /*  "flex-layout.row#3-desktop", */
       "sticky-layout#4-desktop"
     ]
   },
@@ -22,30 +21,22 @@
   },
 
   "flex-layout.row#2-desktop": {
-    "children": ["notification.bar#home"],
+    "children": ["rich-text#home"],
     "props": {
-      "fullWidth": "true"
+      "fullWidth": "true",
+      "blockClass": "bg-ligthGreen",
+      "horizontalAlign":"center"
     }
   },
-  "notification.bar#home": {
+  "rich-text#home": {
     "props": {
-      "content": "SELECTED ITEMS ON SALE! CHECK IT OUT!"
+      "text": "ACTUALMENTE SÓLO REALIZAMOS [ENVÍOS A BOGOTÁ](). RECIBE TU PEDIDO EN [HASTA EN 3 DÍAS HÁBILES]().",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass":"notification-header"
     }
   },
-  "flex-layout.row#3-desktop": {
-    "props": {
-      "blockClass": "menu-link",
-      "horizontalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
-      "fullWidth": true
-    },
-    "children": [
-      "vtex.menu@2.x:menu#websites",
-      "flex-layout.col#spacer",
-      "vtex.menu@2.x:menu#institutional"
-    ]
-  },
+
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -55,47 +46,237 @@
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#4-desktop"]
+    "children": ["flex-layout.row#2-desktop","flex-layout.row#4-desktop"]
   },
   "flex-layout.row#4-desktop": {
     "props": {
       "blockClass": "main-header",
-      "horizontalAlign": "center",
-      "verticalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
       "fullWidth": true
     },
     "children": [
-      "flex-layout.col#logo-desktop",
-      "flex-layout.col#category-menu",
-      "flex-layout.col#spacer",
-      "search-bar",
-      "locale-switcher",
-      "login",
-      "minicart.v2"
+      "flex-layout.col#logo-desk",
+      "flex-layout.col#middle-menu",
+      "flex-layout.col#bubble-container"
     ]
   },
-  "flex-layout.col#logo-desktop": {
+  "flex-layout.col#logo-desk": {
+    "children": ["logo#desktop"],
     "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["logo#desktop"]
+      "verticalAlign": "middle",
+      "width":"18%",
+      "paddingLeft": 8
+    }
   },
-  "flex-layout.col#category-menu": {
-    "props": {
-      "verticalAlign": "middle"
-    },
-    "children": ["vtex.menu@2.x:menu#category-menu"]
-  },
+
   "logo#desktop": {
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo.png",
-      "width": "180"
+      "url": "https://sugoco.vtexassets.com/assets/vtex/assets-builder/sugoco.sugoco-theme/4.1.6/globals/main-logo-normal___f1229d4b1cb0934047638da289a11cab.svg",
+      "width": "110"
     }
   },
+
+  "flex-layout.col#middle-menu": {
+    "children": ["flex-layout.row#search", "flex-layout.row#menu-p"],
+    "props": {
+      "verticalAlign": "middle",
+      "width":"60%",
+      "blockClass":"Wrapper-middle-menu"
+    }
+  },
+
+  "flex-layout.row#search":{
+    "children":["search-bar#search-b"]
+  },
+
+  "search-bar#search-b":{
+    "props":{
+      "placeholder":"¿Qué producto buscas?",
+      "attemptPageTypeSearch":true,
+      "blockClass":"btn-search"
+    }
+  },
+
+  "flex-layout.row#menu-p":{
+    "children":["vtex.menu@2.x:menu#menu-principal"]
+  },
+
+  "vtex.menu@2.x:menu#menu-principal": {
+    "children": [
+      "menu-item#categorias",
+      "menu-item#todos",
+      "menu-item#desde-70",
+      "menu-item#ultm-oport",
+      "menu-item#modelo"
+      
+    ]
+  },
+  "menu-item#categorias": {
+    "blocks": ["vtex.menu@2.x:submenu#shop"],
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "blockClass":"main-categories",
+      "itemProps": {
+        "type": "internal",
+        "href": "/categorias",
+        "noFollow": false,
+        "tagTitle": "Categorias",
+        "text": "Categorias"
+      },
+      "iconPosition":"right",
+      "iconProps": {
+        "id": "bnd-logo",
+        "size": 16,
+        "viewBox": "0 0 16 16",
+        "activeClassName": "rebel-pink",
+        "mutedClassName": "c-action-primary"
+      }
+    }
+  },
+
+  "vtex.menu@2.x:submenu#shop": {
+    "children": [
+      "vtex.menu@2.x:menu#submenushop"
+    ]
+  },
+  "vtex.menu@2.x:menu#submenushop": {
+    "children": [
+      "menu-item#mercado"
+    ]
+  },
+
+  "menu-item#mercado":{
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/Mercado",
+        "noFollow": false,
+        "tagTitle": "Mercado",
+        "text": "Mercado"
+      }
+    }
+  },
+
+  "menu-item#todos": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/todos",
+        "noFollow": false,
+        "tagTitle": "Todos",
+        "text": "Todos"
+      }
+    }
+  },
+
+  "menu-item#desde-70": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Desde 70%",
+        "text": "Desde 70%"
+      }
+    }
+  },
+
+  "menu-item#ultm-oport": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Ultima Oportunidad",
+        "text": "Ultima Oportunidad"
+      }
+    }
+  },
+
+  "menu-item#modelo": {
+    "props": {
+      "id": "menu-item-shop",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Modelo Sostenible",
+        "text": "Modelo Sostenible",
+        "highlight": true
+      }
+    }
+  },
+
+  "flex-layout.col#bubble-container": {
+    "children": ["flex-layout.row#welcome"],
+    "props": {
+      "width":"22%",
+      "blockClass":"bubble-container"
+    }
+  },
+
+  "flex-layout.row#welcome":{
+    "children":["flex-layout.col#welcome-1", "flex-layout.row#login"],
+    "props":{
+      "blockClass":"login-row"
+    }
+  },
+
+  "flex-layout.col#welcome-1":{
+    "children":["rich-text#text-bienvenido"],
+    "props":{
+      "marginRight": 7,
+      "marginLeft": 2
+    }
+  },
+
+  "flex-layout.row#login":{
+    "children":["flex-layout.col#col-login","flex-layout.col#col-minicart"],
+    "props":{
+      "blockClass":"login-col"
+    }
+  },
+
+  "flex-layout.col#col-login":{
+    "children":["login#log-in"]
+  },
+
+  "login#log-in":{
+    "props":{
+      "showIconProfile":true,
+      "hideIconLabel": true
+    }
+  },
+
+  "flex-layout.col#col-minicart":{
+    "children":["minicart.v2"]
+  },
+
+
+  "rich-text#text-bienvenido":{
+    "props":{
+      "text": "¡Bienvenid@ a Sugo!",
+      "blockClass":"txt-bienvenida"
+    }
+  },
+
   "header-layout.mobile": {
     "children": ["sticky-layout#1-mobile"]
   },
@@ -107,7 +288,7 @@
       "drawer",
       "logo#mobile",
       "flex-layout.col#spacer",
-      "login",
+      "login#log-in",
       "minicart.v2"
     ],
     "props": {

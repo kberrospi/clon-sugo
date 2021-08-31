@@ -67,6 +67,154 @@
   font-weight: 700;
 }
 
+:global(.vtex-rich-text-0-x-headingLevel2--products-destacados){
+  color: #475be9;
+  font-family: Montserrat-Regular;
+  font-size: 2rem;
+}
+
+.strong--products-destacados::after{
+  content: '';
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 5px;
+  background-color: #61c800;
+  /* text-decoration: underline #61c800; */
+}
+
+.strong--products-destacados{
+  position: relative;
+}
+
+.headingLevel2--text-licores{
+  color: white;
+  font-family: Montserrat-Regular;
+  font-size: 2rem;
+}
+
+.strong--text-licores::after{
+  /* border-bottom: 0.4rem solid #61c800; */
+  content: '';
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 5px;
+  background-color: #61c800;
+}
+
+.strong--text-licores {
+  position: relative;
+}
+
+.paragraph--present-prod{
+  color: #92989b;
+  opacity: 1;
+  font-weight: 600;
+  position: relative;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: .75rem;
+}
+
+.paragraph--present-prod::before{
+  font-family: icomoon;
+  content: "\e936";
+  font-size: 1.5rem;
+  text-indent: 0;
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: -31px;
+  color: #7ecb34!important;
+  font-weight: 500;
+}
+
+.headingLevel4--msjSugo{
+  color: white;
+  line-height: 30px;
+  letter-spacing: .03rem;
+  font-size: 26px;
+  font-family: Montserrat-Regular;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.container--msj-datos{
+  margin-top: 12px;
+}
+
+.paragraph--msj-datos{
+  font-size: 12px!important;
+  color: #9eabf0!important;
+  white-space: nowrap;
+}
+
+.link--msj-datos{
+  font-size: 12px!important;
+  color: #9eabf0!important;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.container--mensaje-iso{
+  margin-top: 37px;
+}
+
+.link--notification-header{
+  text-decoration: none;
+  font-family: Montserrat-Bold;
+  font-weight: 900;
+  position: relative;
+  color: #475be0;
+  pointer-events: none;
+}
+
+.link--notification-header::after{
+  content: "";
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 3px;
+  background-color: #61c800;
+}
+
+.paragraph--notification-header{
+  margin: 10px;
+  letter-spacing: .5px;
+}
+
+.wrapper--notification-header{
+  font-size: 0.75rem;
+  font-family: 'Montserrat-SemiBold';
+}
+
+.container--txt-bienvenida{
+  font-family: Montserrat-SemiBold;
+  max-width: 100px;
+  margin: 0 0 0 auto;
+}
+.paragraph--txt-bienvenida{
+  color: #fff;
+  margin-top: 0;
+  height: 36px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.paragraph--msg-succesfull{
+  color:#7ecb34;
+  font-size: 1.5rem;
+  font-family: Montserrat-Semibold;
+}
+
 @media only screen and (min-width: 640px) {
   .container--question .strong {
     font-size: 40px;

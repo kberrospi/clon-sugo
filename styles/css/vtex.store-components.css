@@ -111,3 +111,74 @@
   font-weight: bold;
   font-size: 30px;
 }
+
+.logoContainer--logoFooter{
+  padding: 0;
+}
+
+.logoLink--logoFooter{
+  margin-bottom: -10px;
+}
+
+.imageElement--imgFooter{
+  margin-bottom: -6px;
+  margin-top: 30px;
+}
+
+.imageElement--iso{
+  margin-right: 16px;
+}
+
+.imageElement--carbono{
+  margin-top: -33px
+}
+
+.searchBarInnerContainer :global(.vtex-input-prefix__group){
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid #475be0;
+  font-size: 14px;
+}
+
+:global(.vtex-styleguide-9-x-input)::placeholder{
+  font-size: 14px;
+  font-family: Montserrat-SemiBold;
+  text-align: start;
+}
+
+:global(.vtex-store-components-3-x-searchBarContainer){
+  max-width: 100%;
+  padding-bottom: 0;
+}
+
+:global(.vtex-styleguide-9-x-input), :global(.vtex-input__suffix) {
+  border: 0;
+  padding: 0;
+}
+
+:global(.vtex-store-components-3-x-searchIcon ){
+  color: #475be0
+}
+
+:global(.vtex-menu-2-x-styledLinkContainer){
+  margin: 0;
+  /* padding: 0;*/
+}
+
+:global(.vtex-menu-2-x-styledLink){
+  padding: 8px 0;
+  border-bottom: 6px solid transparent;
+  display: block;
+}
+
+:global(.vtex-menu-2-x-menuItem) :global(.vtex-menu-2-x-styledLinkContainer)  :global(.vtex-menu-2-x-styledLinkContent){
+  font-family: Montserrat-SemiBold;
+  font-size: 13px;
+  font-weight: 500;
+ /*  color: #475be0; */
+}
+
+:global(.vtex-store-components-3-x-container){
+  padding: 0
+}
+

@@ -9,14 +9,206 @@
   color: #FFFFFF;
 }
 
-.galleryLayoutSwitcher {
+/* .galleryLayoutSwitcher {
   border-radius: 4px 4px 4px 4px;
   justify-content: center;
   overflow: hidden;
   width: auto !important;
   align-self: center
-}
+} */
 
 .galleryItem--list {
   border-bottom: 1px #E7E9EE solid;
+}
+
+.filterItem{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px .75rem;
+}
+
+.filterItem :global(.vtex-checkbox__label) {
+  color: #82878a;
+  font-weight: 600;
+  margin-left: 5px;
+  font-size: .75rem;
+}
+
+.filterTitle{
+  font-size: 1.1em;
+  color: #475be0;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: .75rem;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: Montserrat-Bold;
+  outline: none;
+}
+
+/* .filtersWrapper :global(.vtex-search-result-3-x-filterMessage){
+  display: none;
+} */
+
+.filterSelected{
+  padding: 0;
+}
+
+.filter__container--selectedFilters :global(.vtex-checkbox__line-container) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.filterMessage{
+  display: none;
+}
+
+.filterContent :global(.vtex-checkbox__inner-container){
+  border-radius: .75rem;
+  border-width: 1px;
+}
+
+.galleryTitle--layout{
+  display: none;
+}
+
+.orderByDropdown{
+  z-index: 10;
+}
+
+.orderByButton{
+  border: none;
+  width: fit-content;
+}
+
+.orderByText{
+  cursor: pointer;
+  font-size: .875rem;
+  color: #475be0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-family: Montserrat-Regular;
+}
+
+.caretIcon{
+  width: 16px;
+  height: 16px;
+}
+
+.filterPopupArrowIcon{
+  padding: 0 10px;
+}
+
+.orderByOptionsContainer{
+  margin-top: 45px;
+  min-width: auto;
+  border: none;
+  z-index: 50;
+  width: fit-content;
+  left: 0;
+  box-shadow: none;
+  width: 225px;
+  background-color: #f0f0f0;
+  padding: 10px 13px;
+  border-radius: 0;
+}
+.orderByOptionItem{
+  background-color: #f0f0f0;
+  color: #82878a;
+  padding: 6px 15px;
+  font-size: .75rem;
+  font-family: Montserrat-Regular;
+}
+
+.orderByOptionItem:hover{
+  background-color: #475be0;
+  color: #f2f2f3;
+}
+
+.filterPopupTitle{
+  font-size: 0;
+}
+
+.totalProducts--layout{
+  font-weight: 600;
+  color: #82878a;
+  font-size: .75em;
+  letter-spacing: .03em;
+  font-family: Montserrat-Regular;
+}
+
+.totalProducts--layout :global(.vtex-search-result-3-x-totalProductsMessage){
+  color: #82878a;
+  font-family: Montserrat-Regular;
+}
+
+.orderByOptionItem, :global(.vtex-search-result-3-x-orderByOptionsContainer) {
+  min-width: 180px;
+}
+
+:global(.vtex-search-result-3-x-filter__container--selectedFilters)
+  :global(.vtex-checkbox__box){
+  color: white
+}
+
+.filter__container--selectedFilters
+  :global(.vtex-checkbox__inner-container){
+    border: none;
+}
+
+.filter__container--selectedFilters
+  :global(.vtex-checkbox__inner-container)::before{
+    font-family: icomoon;
+    content: "\e905";
+    font-size: 1rem;
+    text-indent: 0;
+    display: block;
+    color: #475be0!important;
+}
+
+:global(.vtex-search-result-3-x-filter), :global(.vtex-search-result-3-x-filterTemplateOverflow){
+  padding: 0;
+}
+
+:global(.vtex-search-result-3-x-filterTemplateOverflow) :global(.vtex-slider-container){
+  padding: 0 .95rem;
+}
+
+:global(.vtex-search-result-3-x-filter__container){
+  border-bottom: 1px solid #475be0;
+  padding: 10px 0;
+}
+
+:global(.vtex-search-result-3-x-filter__container--title ){
+  padding: 0;
+}
+
+:global(.vtex-search-result-3-x-filterTemplateOverflow) :global(.vtex-slider) :global(.vtex-slider__base-internal), 
+  :global(.vtex-search-result-3-x-filterTemplateOverflow) :global(.vtex-slider) :global(.vtex-slider__selector){
+  background-color: #475be0;
+}
+
+:global(.vtex-search-result-3-x-filterTemplateOverflow) 
+  :global(.vtex-slider__values-container){
+  margin-bottom: 5px;
+  color: #82878a;
+}
+
+:global(.vtex-search-result-3-x-filterTemplateOverflow) :global(.vtex-slider__values-container) :global(.vtex-slider__left-value), 
+  :global(.vtex-search-result-3-x-filterTemplateOverflow) :global(.vtex-slider__values-container) :global(.vtex-slider__right-value){
+  color: #82878a;
+  font-family: Montserrat-Regular;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: .75rem;
 }

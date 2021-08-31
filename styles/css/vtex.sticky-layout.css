@@ -1,0 +1,10 @@
+:global(.vtex-sticky-layout-0-x-wrapper--sticky-header){
+  height: 138px;
+}
+
+:global(.vtex-sticky-layout-0-x-container){
+  background-color: #fff;
+  box-shadow: -5px 1px 16px 0 rgb(0 0 0 / 28%);
+}
+
+

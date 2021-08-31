@@ -1,0 +1,34 @@
+{
+  "store.custom#todos": {
+    "blocks": ["flex-layout.row#content-all"]
+  },
+
+  "flex-layout.row#content-all":{
+    "children": [ "search-result-layout.customQuery#todos"],
+    "props":{
+      "blockClass":"flex-todos"
+    }
+  },
+
+  "search-result-layout.customQuery#todos": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehavior": "Dynamic",
+        "skusFilter":"ALL",
+        "simulationBehavior": "default",
+        "installmentCriteria": "MAX_WITHOUT_INTEREST",
+        "__unstableProductOriginVtex": true,
+        "maxItemsPerPage": 15,
+        "queryField": "/155",
+        "mapField": "productClusterIds",
+        "hideUnavailableItems": false
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  }
+}

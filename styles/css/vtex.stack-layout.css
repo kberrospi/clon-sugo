@@ -7,3 +7,9 @@
   top: 0;
   left: auto;
 }
+
+/* :global(.vtex-product-highlights-2-x-productHighlightText){
+  background-color: #475be9;
+  color: white;
+  border-radius: .7px 22.5px 22.5px .7px;
+} */

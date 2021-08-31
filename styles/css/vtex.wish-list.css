@@ -1,0 +1,74 @@
+:global(.vtex-slider-layout-0-x-sliderTrack--block-prod){
+  display: flex;
+  flex-direction: column;
+}
+
+:global(.vtex-slider-layout-0-x-slide--block-prod){
+  display: flex;
+  flex-direction: row;
+  width: 65%!important;
+}
+
+:global(.vtex-wish-list-1-x-wishlistIconContainer){
+  display: flex;
+}
+
+:global(.vtex-product-summary-2-x-element--product-add) 
+  :global(.vtex-product-summary-2-x-imageNormal) {
+  max-height: 10rem;
+}
+
+:global(.vtex-product-summary-2-x-element--product-add) 
+  :global(.vtex-product-summary-2-x-imageWrapper){
+  max-width: 150px;
+}
+
+:global(.vtex-product-summary-2-x-element--product-add) 
+  :global(.vtex-product-summary-2-x-nameContainer){
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: center;
+}
+
+:global(.vtex-product-summary-2-x-element--product-add) 
+  :global(.vtex-product-summary-2-x-brandName){
+  font-size: .9rem;
+}
+
+:global(.vtex-product-summary-2-x-element--product-add) 
+  :global(.vtex-store-components-3-x-priceContainer){
+  width: 150px;
+}
+
+:global(.vtex-product-summary-2-x-element--product-add) 
+  :global(.vtex-product-summary-2-x-priceContainer){
+  justify-content: center;
+}
+
+:global(.vtex-product-summary-2-x-element--product-add) 
+  :global(.vtex-product-summary-2-x-sellingPrice), 
+  :global(.vtex-product-summary-2-x-price_installmentContainer),
+  :global(.vtex-product-summary-2-x-listPriceLabel),
+  :global(.vtex-product-summary-2-x-listPrice){
+  font-family: 'Montserrat-SemiBold';
+}
+
+.wishlistIconContainer 
+  :global(.vtex-button):hover{
+  background-color: #EDEDED;
+  height: 50px;
+}
+/* .element--product-add
+  :global(.vtex-button){
+    height: 40%;
+    width: 30%;
+} */
+
+.wishlistIconContainer{
+  align-items: center;
+  padding-right: 5px;
+}
+
+
+
+

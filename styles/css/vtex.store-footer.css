@@ -4,8 +4,27 @@
 
 .row--menu-row .rowContainer {
   align-items: flex-start;
+  max-width: 100%;
 }
 
 .row--payment-methods {
   padding-top: 16px;
+  
+}
+
+.footerLayout--footer-desktop :global(.vtex-flex-layout-0-x-flexRow){
+  background-color: #475be0;
+  height: auto;
+  color: #fff;
+}
+
+.footerLayout--footer-desktop :global(.vtex-rich-text-0-x-paragraph){
+  color: #fff;
+  font-size: 14px;
+  font-family: Montserrat-Regular;
+}
+
+.footerLayout--footer-desktop :global(.vtex-flex-layout-0-x-flexRow--bloque-payment){
+  display: flex;
+  align-items: center;
 }

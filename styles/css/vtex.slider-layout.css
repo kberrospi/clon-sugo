@@ -2,11 +2,11 @@
   justify-content: center;
 }
 .sliderLayoutContainer--carousel {
-  background-color: #F0F0F0;
+  background-color: white;
 }
 
 .sliderTrackContainer {
-  max-width: 1520px;
+  max-width: 100%;
 }
 
 .paginationDotsContainer {
@@ -22,6 +22,17 @@
 
 .slide--shelf {
   margin-bottom: 25px;
-  padding-left: .5rem;
-  padding-right: .5rem;
+}
+
+:global(.vtex-slider-layout-0-x-sliderTrackContainer--shelf-licores){
+  height: 436px;
+}
+:global(.vtex-slider-layout-0-x-slideChildrenContainer--shelf-licores) {
+  height: 436px;
+}
+
+:global(.vtex-slider-layout-0-x-slideChildrenContainer--shelf-licores) :global(.vtex-product-summary-2-x-containerNormal){
+  max-width: 270px!important;
+  padding: 25px;
+  border-radius: 9px;
 }

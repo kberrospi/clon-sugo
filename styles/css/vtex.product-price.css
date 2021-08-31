@@ -1,12 +1,27 @@
 .listPrice {
-  color: #727273;
-  margin-bottom: .25rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: .05em;
+  color: #82878a;
+  text-decoration: line-through;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 5px;
+
+}
+
+.sellingPriceValue--price-value{
+  font-size: 2rem;
+  letter-spacing: .05em;
+  color: #475be0;
+  font-weight: 600;
+  font-style: normal;
+  margin-left: 4px;
 }
 
 .sellingPrice {
   color: #3f3f40;
   font-size: 1.25rem;
+  
 }
 
 .sellingPriceValue {
@@ -25,23 +40,33 @@
 }
 
 .sellingPriceValue--summary {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #2E2E2E;
+  font-size: 18px;
+  color: #475be9;
+  font-family: Montserrat-SemiBold;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--row-price){
+  justify-content: space-between;
+  align-items: center;
 }
 
 .savings--summary {
-  background: #8BC34A;
-  border-radius: 1000px;
+  font-size: 1rem;
+  color: #fff;
+  width: 56px;
+  height: 38px;
   align-items: center;
+  justify-content: center;
+  background-image: url(https://sugoco.vtexassets.com/arquivos/burbuja_azul_flag.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  list-style: none;
+  margin: 0;
   display: flex;
+  word-spacing: -3px;
+  font-family: Montserrat-Regular;
+  font-weight: 700;
 
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  vertical-align: baseline;
-  color: #FFFFFF;
 }
 
 .savings-discount--summary {
@@ -76,4 +101,35 @@
   vertical-align: baseline;
   color: #FFFFFF;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+:global(.vtex-product-price-1-x-savings--price-saving){
+  display: block;
+}
+
+:global(.vtex-product-price-1-x-savingsPercentage--price-saving){
+  font-size: 1.284rem;
+  width: 83px;
+  height: 51px;
+  word-spacing: -4px;
+  color: #fff;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://sugoco.vtexassets.com/arquivos/burbuja_azul_flag.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  list-style: none;
+  margin: 0;
+  display: flex;
+}
+
+.savingsPercentage--price-saving::before{
+  content: "-";
+}
+
+.listPrice--summary{
+  font-size: .75rem;
+  font-family: Montserrat-SemiBold;
+  color: #92989b;
 }

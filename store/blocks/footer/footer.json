@@ -4,24 +4,13 @@
   },
   "footer-layout.desktop": {
     "children": [
-      "flex-layout.row#footer-1-desktop",
-      "flex-layout.row#footer-2-desktop",
-      "flex-layout.row#footer-3-desktop"
-    ]
-  },
-  "flex-layout.row#footer-1-desktop": {
-    "children": [
-      "vtex.menu@2.x:menu#Products",
-      "vtex.menu@2.x:menu#footer-clothing",
-      "vtex.menu@2.x:menu#footer-decoration",
-      "vtex.menu@2.x:menu#footer-bags",
-      "footer-spacer",
-      "social-networks"
+      "image#footer-1",
+      "flex-layout.row#row-1",
+      "flex-layout.row#row-2",
+      "flex-layout.row#row-3"
     ],
-    "props": {
-      "blockClass": "menu-row",
-      "paddingTop": 6,
-      "paddingBottom": 3
+    "props":{
+      "blockClass":"footer-desktop"
     }
   },
 
@@ -48,28 +37,258 @@
     }
   },
 
-  "flex-layout.row#footer-2-desktop": {
-    "children": ["accepted-payment-methods"],
-    "props": {
-      "blockClass": "payment-methods"
-    }
-  },
-  "accepted-payment-methods": {
-    "props": {
-      "paymentMethods": ["MasterCard", "Visa", "Diners Club"]
+  "image#footer-1":{
+    "props":{
+      "src":"https://sugoco.vtexassets.com/arquivos/curva_footer.svg",
+      "blockClass":"imgFooter"
     }
   },
 
-  "flex-layout.row#footer-3-desktop": {
-    "children": ["rich-text#footer"],
+  "flex-layout.row#row-1": {
+    "children": ["flex-layout.row#row-logo"],
     "props": {
-      "blockClass": "credits"
+      "blockClass": "row-1"
+    }
+  },
+
+  "flex-layout.row#row-logo": {
+    "children":["logo#logoFooter", "rich-text#msjSugo"],
+    "props": {
+      "blockClass":"rowLogo",
+      "horizontalAlign": "left"
+    }
+  },
+
+ "logo#logoFooter":{
+  "props": {
+    "title": "Logo",
+    "href": "/",
+    "url": "https://sugoco.vtexassets.com/assets/vtex/assets-builder/sugoco.sugoco-theme/4.0.3/globals/main-footer-logo___b10be364fdd8f3c9ab32da3cc6ca61f2.svg",
+    "width": "110",
+    "blockClass":"logoFooter"
+  }
+ },
+
+ "rich-text#msjSugo":{
+  "props":{
+    "text":"#### La primera tienda sostenible donde ahorrando, también ayudas al planeta.",
+    "blockClass":"msjSugo"
+  }
+ },
+
+ "flex-layout.row#row-2":{
+    "children":["rich-text#txt-transparent", "vtex.menu@2.x:menu#menu-footer", "image#industriaComercio" ],
+    "props": {
+      "blockClass": "row-2",
+      "paddingBottom":4
+    }
+ },
+
+ "rich-text#txt-transparent":{
+   "props":{
+     "text": "Somos transparentes",
+     "width": "15%",
+     "blockClass": "somos"
+   }
+ },
+ "rich-text#txt-terms":{
+  "props":{
+    "text": "Somos transparentes",
+    "width": "54%"
+  }
+},
+"rich-text#txt-industria":{
+  "props":{
+    "text": "Somos transparentes",
+    "width": "31%"
+  }
+},
+
+"vtex.menu@2.x:menu#menu-footer": {
+  "children": [
+    "menu-item#terms",
+    "menu-item#pol",
+    "menu-item#pqr"
+  ],
+  "props":{
+    "width": "54%",
+    "blockClass":"menuFooter"
+  }
+},
+
+"menu-item#terms": {
+  "props": {
+    "id": "menu-terms",
+    "type": "custom",
+    "highlight": false,
+    "blockClass": "terms",
+    "itemProps": {
+      "type": "internal",
+      "href": "/",
+      "noFollow": false,
+      "tagTitle": "Terminos",
+      "text": "Terminos y condiciones"
+    }
+  }
+},
+
+"menu-item#pol": {
+  "props": {
+    "id": "menu-terms",
+    "type": "custom",
+    "highlight": false,
+    "blockClass": "terms",
+    "itemProps": {
+      "type": "internal",
+      "href": "/",
+      "noFollow": false,
+      "tagTitle": "Politica",
+      "text": "Política de privacidad"
+    }
+  }
+},
+
+"menu-item#pqr": {
+  "props": {
+    "id": "menu-terms",
+    "type": "custom",
+    "highlight": false,
+    "blockClass": "terms",
+    "itemProps": {
+      "type": "internal",
+      "href": "/",
+      "noFollow": false,
+      "tagTitle": "Politica",
+      "text": "Peticiones, quejas y reclamos"
+    }
+  }
+},
+
+"image#industriaComercio":{
+  "props": {
+    "alt": "indusriaComercio",
+    "src": "https://sugoco.vtexassets.com/arquivos/superintendencia.png",
+    "link": "https://www.sic.gov.co",
+    "maxHeight": "45px"
+  }
+ },
+
+  "flex-layout.row#row-3": {
+    "children": ["flex-layout.col#row-3-1", "flex-layout.col#row-3-2"],
+    "props": {
+      "blockClass": "row-3",
+      "paddingBottom":6
     }
   },
   "rich-text#footer": {
     "props": {
-      "text": "All stock and product photos are from photos.icons8.com",
-      "blockClass": "footer"
+      "text": "Realiza tu pago de forma segura",
+      "blockClass": "msg-pago"
+    }
+  },
+
+  "flex-layout.col#row-3-1":{
+    "children":["rich-text#footer","flex-layout.row#row-pagos", "rich-text#datosColombia"],
+    "props":{
+      "blockClass": "pago"
+    }
+  },
+
+  "flex-layout.row#row-pagos":{
+    "children":["image#visa","image#master","image#american","image#dinner"],
+    "props":{
+      "blockClass":"bloque-payment",
+      "horizontalAlign":"left"
+    }
+  },
+
+  "image#visa":{
+    "props":{
+      "src":"https://sugoco.vtexassets.com/assets/vtex/assets-builder/sugoco.sugoco-theme/4.1.6/globals/visa___ba3705d5ddd03e1f4758ba127e779b0e.svg",
+      "height":"20px"
+    }
+  },
+  "image#master":{
+    "props":{
+      "src":"https://sugoco.vtexassets.com/assets/vtex/assets-builder/sugoco.sugoco-theme/4.1.6/globals/master___466ee8a80a25a547e643b6925bc7599e.svg",
+      "height":"44px"
+    }
+  },
+  "image#american":{
+    "props":{
+      "src":"https://sugoco.vtexassets.com/assets/vtex/assets-builder/sugoco.sugoco-theme/4.1.6/globals/american___a37a61c9f136c029b5d8d71cc6878fe0.svg",
+      "height":"26px"
+    }
+  },
+  "image#dinner":{
+    "props":{
+      "src":"https://sugoco.vtexassets.com/assets/vtex/assets-builder/sugoco.sugoco-theme/4.1.6/globals/diners___1fdc888054f802c9ca8736abfaa8d38a.svg",
+      "height":"33px"
+    }
+  },
+
+  "rich-text#datosColombia":{
+    "props":{
+      "text": "Sugo Colombia SAS | NIT:901.396.973-9 | Dirección: Cra 13 # 90-17 Bogotá | E-mail de notificación judicial: legal@sugo.com ",
+      "blockClass":"msj-datos"
+    }
+  },
+
+  "flex-layout.col#row-3-2":{
+    "children":["rich-text#excelencia", "flex-layout.col#exclencia-2"],
+    "props":{
+      "blockClass":"excelencia-iso"
+    }
+  },
+
+  "flex-layout.col#exclencia-1":{
+    "children":["rich-text#excelencia"]
+  },
+
+  "flex-layout.col#exclencia-2":{
+    "children":["flex-layout.row#bloque-isos"]
+  },
+
+  "rich-text#excelencia":{
+    "props":{
+      "text":"Excelencia en todo lo que hacemos",
+      "blockClass":"mensaje-iso"
+    }
+  },
+
+  "flex-layout.row#bloque-isos":{
+    "children":["image#aenor1","image#aenor2","image#aenor3","image#aenor4"],
+    "props":{
+      "blockClass":"bloque-isos"
+    }
+  },
+
+  "image#aenor1":{
+    "props":{
+      "src":"https://sugoco.vtexassets.com/arquivos/iso_1-v2.png",
+      "height":"60px",
+      "blockClass":"iso"
+    }
+  },
+  "image#aenor2":{
+    "props":{
+      "src":"https://sugoco.vtexassets.com/arquivos/iso_2-v2.png",
+      "height":"60px",
+      "blockClass":"iso"
+    }
+  },
+  "image#aenor3":{
+    "props":{
+      "src":"https://sugoco.vtexassets.com/arquivos/iso_3-v2.png",
+      "height":"60px",
+      "blockClass":"iso"
+    }
+  },
+  "image#aenor4":{
+    "props":{
+      "src":"https://sugoco.vtexassets.com/arquivos/iso_4-v2.png",
+      "height":"95px",
+      "blockClass":["iso","carbono"]
     }
   },
 

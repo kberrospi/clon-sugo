@@ -5,13 +5,26 @@
       /* You can make references to blocks defined in other files.
        * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
       "__fold__.experimentalLazyAssets",
-      "flex-layout.row#deals",
-      "rich-text#shelf-title",
-      "flex-layout.row#shelf",
-      "info-card#home",
-      "rich-text#question",
-      "rich-text#link",
-      "newsletter"
+      /* "flex-layout.row#deals", */
+      /* "rich-text#shelf-title", */
+      /* "flex-layout.row#shelf", */
+      "flex-layout.row#products-list",
+      "rich-text#present-products",
+      "list-context.image-list#info",
+      /* "rich-text#question", */
+      "flex-layout.row#productos-destacados",
+      "flex-layout.row#products-info",
+      "rich-text#present-products",
+      "list-context.image-list#curva-up",
+      "flex-layout.row#text-licores",
+      "flex-layout.row#licores",
+      "list-context.image-list#curva-down",
+      "rich-text#last-chance",
+      "flex-layout.row#row-last-chance",
+      "rich-text#present-products"
+     
+     /*  "rich-text#link",
+      "newsletter" */
     ]
   },
 
@@ -21,16 +34,86 @@
       "height": 720,
       "images": [
         {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-principal.png",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
+          "image": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/bb713777-64a1-4f94-968d-3ba22796f672___d52b59e1319d44b1ee62054c97990808.jpg",
+          "mobileImage": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/38f38a47-9370-4587-9139-01c203343e9e___270555ec39f43f6ad8e4152dc5c43c9e.jpg"
         },
         {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner.jpg",
-          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-principal-mobile.jpg"
+          "image": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/b404e21b-ca74-4e7e-94bc-3c344b574ff8___a13caa04d330fcdbcdcc9a92f933905e.jpg",
+          "mobileImage": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/c8c3ce29-603c-45e9-9fc7-0474b3463ac4___24981128803c34bb431c0bd600efe98b.jpg"
+        },
+        {
+          "image": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/8c363139-fcd3-41a2-a69a-94c3d907ba5c___fa996a289cd9f6207a1bca9cadb169a8.jpg",
+          "mobileImage":"https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/db46427b-0ed2-4874-9b3c-29a0673ee554___341406ddf5392f3e2e8a13192df2d779.jpg"
+        },
+        {
+          "image": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/13b07cb2-2f17-421d-b329-bd6170d3fbd5___f843170ad78fa9d3d45767f207cc25bd.jpg",
+          "mobileImage":"https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/fa1470b5-3da2-4ae8-ae63-247135e4af60___dfcf957a3d71b7b870154caf7ef5baff.jpg"
+        },
+        {
+          "image": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/5e05e954-5f0a-40d3-88d1-0ce2b4697e6a___c61c9cfcd5e85b653ce9ca701cc33e22.jpg",
+          "mobileImage": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/fa1470b5-3da2-4ae8-ae63-247135e4af60___dfcf957a3d71b7b870154caf7ef5baff.jpg"
         }
       ]
     }
   },
+
+  "list-context.image-list#info": {
+    "children": ["slider-layout#info-home"],
+    "props": {
+      "height": 720,
+      "images": [
+        {
+          "image": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/6127136a-f6e7-43c1-9f9e-505e0f436f5e___a5320f7efd4b5522f08a48fce9a0e9a5.jpg",
+          "mobileImage": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/38f38a47-9370-4587-9139-01c203343e9e___270555ec39f43f6ad8e4152dc5c43c9e.jpg"
+        }
+      ]
+    }
+  },
+
+  "list-context.image-list#curva-up": {
+    "children": ["slider-layout#slider-curva-up"],
+    "props": {
+      "height": 720,
+      "images": [
+        {
+          "image": "https://sugoco.vtexassets.com/arquivos/curva_arriba-home.jpg",
+          "mobileImage": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/38f38a47-9370-4587-9139-01c203343e9e___270555ec39f43f6ad8e4152dc5c43c9e.jpg"
+        }
+      ]
+    }
+  },
+
+  "list-context.image-list#curva-down": {
+    "children": ["slider-layout#slider-curva-down"],
+    "props": {
+      "height": 720,
+      "images": [
+        {
+          "image": "https://sugoco.vtexassets.com/arquivos/curva_abajo-home.jpg",
+          "mobileImage": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/38f38a47-9370-4587-9139-01c203343e9e___270555ec39f43f6ad8e4152dc5c43c9e.jpg"
+        }
+      ]
+    }
+  },
+
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#slider-licores"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "blockClass":"products-licores"
+    }
+  },
+
+  "list-context.product-list#list-last-chance": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#ult-chance"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "blockClass":"products-licores"
+    }
+  },
+
   "slider-layout#demo-images": {
     "props": {
       "itemsPerPage": {
@@ -39,27 +122,60 @@
         "phone": 1
       },
       "infinite": true,
-      "showNavigationArrows": "desktopOnly",
+      "autoplay": {
+        "timeout": 3000
+      },
+      "showPaginationDots": "never",
       "blockClass": "carousel"
+      
     }
   },
 
-  "rich-text#shelf-title": {
+  "slider-layout#info-home": {
     "props": {
-      "text": "## Summer",
-      "blockClass": "shelfTitle"
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "blockClass": "carousel"
+      
     }
   },
-  "flex-layout.row#shelf": {
-    "children": ["list-context.product-list#demo1"]
-  },
-  "list-context.product-list#demo1": {
-    "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#demo-products"],
+
+  "slider-layout#slider-curva-up": {
     "props": {
-      "orderBy": "OrderByTopSaleDESC"
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "blockClass": "carousel"
+      
     }
   },
+
+  "slider-layout#slider-curva-down": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": false,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never",
+      "blockClass": "carousel"
+      
+    }
+  },
+
   "slider-layout#demo-products": {
     "props": {
       "itemsPerPage": {
@@ -71,6 +187,237 @@
       "fullWidth": false,
       "blockClass": "shelf"
     }
+  },
+
+  "slider-layout#slider-licores":{
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "showPaginationDots": "never",
+      "blockClass": "shelf-licores"
+    }
+  },
+
+  "slider-layout#ult-chance":{
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "showPaginationDots": "never",
+      "blockClass": "shelf-licores"
+    }
+  },
+
+/*   "rich-text#shelf-title": {
+    "props": {
+      "text": "## Summer",
+      "blockClass": "shelfTitle"
+    }
+  }, */
+/*   "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"],
+    "props":{
+      "fullWidth":true,
+      "horizontAlign":"center"
+    }
+  }, */
+
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 15,
+        "queryField": "/155",
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehaivor":"Dynamic",
+        "skusFilter":"ALL",
+        "simulationBehaivor":"default",
+        "installmentCriteria":"MAX_WITHOUT_INTEREST",
+        "__unstableProductOriginVtex": true,
+        "mapField":"productClusterIds"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+
+  "search-result-layout.customQuery#info-home": {
+    "props": {
+      "querySchema": {
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 5,
+        "queryField": "/155",
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehaivor":"Dynamic",
+        "skusFilter":"ALL",
+        "simulationBehaivor":"default",
+        "installmentCriteria":"MAX_WITHOUT_INTEREST",
+        "__unstableProductOriginVtex": true,
+        "mapField":"productClusterIds"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+
+  "search-result-layout.customQuery#productos-licores": {
+    "props": {
+      "querySchema": {
+        "hideUnavailableItems": false,
+        "maxItemsPerPage": 3,
+        "queryField": "/155",
+        "orderByField": "OrderByReleaseDateDESC",
+        "facetsBehaivor":"Dynamic",
+        "skusFilter":"ALL",
+        "simulationBehaivor":"default",
+        "installmentCriteria":"MAX_WITHOUT_INTEREST",
+        "__unstableProductOriginVtex": true,
+        "mapField":"productClusterIds"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+
+  "search-result-layout.desktop#home": {
+    "children": [
+      "flex-layout.row#results"
+    ],
+    "props": {
+      "pagination": "show-more"
+    }
+  },
+
+  "search-content#home": { 
+    "blocks": ["gallery#home", "not-found"]
+  },
+
+  "flex-layout.row#productos-destacados":{
+    "children":["rich-text#prods-dest"]
+  },
+
+  "flex-layout.row#row-licores":{
+    "children":[]
+  },
+
+  "flex-layout.row#text-licores":{
+    "children":["rich-text#licores"],
+    "props":{
+      "blockClass":"row-text-licores"
+    }
+  },
+
+  "flex-layout.row#row-last-chance":{
+    "children":["list-context.product-list#list-last-chance"]
+  },
+
+  "flex-layout.row#licores":{
+    "children":["flex-layout.col#img-licores", "flex-layout.col#col-licores"],
+    "props":{
+      "blockClass":"row-licores",
+      "paddingBottom":8,
+      "paddingTop":4
+    }
+  },
+
+  "flex-layout.col#img-licores":{
+    "children":["image#pub-licores"],
+    "props":{
+      "width":"23%"
+    }
+  },
+
+  "flex-layout.col#col-licores":{
+    "children":["list-context.product-list#demo1"],
+    "props":{
+      "width":"75%",
+      "maxHeight":"320px",
+      "blockClass":"vitrina-licores"
+    }
+    
+  },
+
+  "flex-layout.row#results": { 
+    "children": [ 
+      "search-content#home"
+    ]
+  },
+
+  "flex-layout.row#products-list":{
+    "children":["search-result-layout.customQuery#home"]
+  },
+
+  "flex-layout.row#products-info":{
+    "children": ["search-result-layout.customQuery#info-home"]
+  },
+
+  "rich-text#licores": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "## Licores desde **40% off**",
+      "font": "t-heading-2",
+      "blockClass": "text-licores"
+    }
+  },
+
+  "rich-text#last-chance": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "## Ultima **oportunidad**",
+      "font": "t-heading-2",
+      "blockClass": "products-destacados"
+    }
+  },
+
+  "rich-text#prods-dest": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "## Productos **destacados**",
+      "font": "t-heading-2",
+      "blockClass": "products-destacados"
+    }
+  },
+
+  "rich-text#present-products":{
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "Estos productos pueden presentar defectos en su presentación, \n sin embargo su calidad y funcionalidad no se ven afectadas.",
+      "font":"t-body",
+      "blockClass": "present-prod"
+    }
+  },
+
+  "image#pub-licores": {
+    "props": {
+      "src": "https://sugoco.vtexassets.com/assets/vtex.file-manager-graphql/images/6a0c3d32-8346-47e0-a36f-085767529b0d___cc4aa1f4ce2678f5ddf7e6831209eb24.png",
+      "blockClass":"img-licores"
+    }
+  },
+
+  "gallery#home": {
+    "blocks": ["product-summary.shelf"]
   },
 
   "info-card#home": {
@@ -85,19 +432,7 @@
       "blockClass": "info-card-home",
       "textAlignment": "center"
     }
-  },
-
-  "rich-text#question": {
-    "props": {
-      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
-      "blockClass": "question"
-    }
-  },
-
-  "rich-text#link": {
-    "props": {
-      "text": "\n**Reach us at**\nwww.vtex.com.br",
-      "blockClass": "link"
-    }
   }
+
+
 }

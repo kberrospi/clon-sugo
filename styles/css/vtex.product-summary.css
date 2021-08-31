@@ -24,9 +24,10 @@
 }
 
 .brandName {
-  font-weight: 600;
-  font-size: 18px;
-  color: #2E2E2E;
+  font-size: .75rem;
+  font-weight: 900;;
+  color: #82878a;
+  font-family: Montserrat-Regular;
 }
 
 .container {
@@ -39,4 +40,39 @@
 
 .image {
   border-radius: 0.25rem;
+}
+
+.buy-button{
+  color: red;
+}
+
+:global(.vtex-product-summary-2-x-container) {
+  background-color: #fff;
+  max-width: 220px!important;
+  padding: 40px 0;
+  margin: 0 auto;
+  border-radius: 9px;
+  width: 100%;
+  position: relative;
+  border-bottom: .9px solid #e5e6e7;
+  border-radius: inherit;
+}
+
+:global(.vtex-product-summary-2-x-element){
+  position: relative;
+  padding: 0;
+} 
+
+:global(.vtex-product-summary-2-x-element--product-add){
+  display: flex;
+  flex-direction: row;
+}
+
+:global(.vtex-product-summary-2-x-container--product-add){
+ max-width: 100%!important;
+ padding: 15px!important;
+}
+
+:global(.vtex-product-summary-2-x-image--img-summary){
+  max-width: 180px;
 }

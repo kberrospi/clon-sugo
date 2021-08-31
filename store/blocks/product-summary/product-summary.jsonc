@@ -1,16 +1,84 @@
 {
   "product-summary.shelf": {
     "children": [
+      "flex-layout.row#btn-wishList",
+      "last-unit#product-summary",
       "stack-layout#prodsum",
+      /* "last-unit#product-summary", */
+      /* "flex-layout.col#productRating",
+      "product-summary-space", */
+      "flex-layout.row#row-price-summary",
       "product-summary-name",
-      "flex-layout.col#productRating",
-      "product-summary-space",
-      "product-list-price#summary",
-      "flex-layout.row#selling-price-savings",
-      "product-installments#summary",
-      "add-to-cart-button"
+      /* "product-installments#summary", */
+     /*  "add-to-cart-button" */
+     "flex-layout.row#row-fv",
+     "flex-layout.row#btn-prod"
     ]
   },
+
+  /*----------------------------*/
+    /*PRICE*/
+    "flex-layout.row#row-price-summary":{
+      "children":["flex-layout.col#col-listprice", "flex-layout.col#col-saving"],
+      "props":{
+        "blockClass":"content-price-summary"
+      }
+    },
+
+    "flex-layout.col#col-listprice":{
+      "children":[
+        "product-list-price#summary",
+        "product-selling-price#summary",
+        "training-app#pum-summary"
+      ]
+    },
+
+    "product-list-price#summary": {
+      "props": {
+        "blockClass": "summary"
+      }
+    },
+
+    "product-selling-price#summary": {
+      "props": {
+        "blockClass": "summary"
+      }
+    },
+    "training-app#pum-summary":{
+      "props":{
+        "name":"CINCO",
+        "showTitle":false,
+        "blockClass":"pum-summary"
+      }
+    },
+  
+    "flex-layout.col#col-saving":{
+      "children":["product-price-savings#summary"],
+      "props":{
+        "blockClass":"saving-summary"
+      }
+    },
+    "product-price-savings#summary": {
+      "props": {
+        "markers": [
+          "discount"
+        ],
+        "blockClass": "summary",
+        "message": "{savingsPercentage}"
+      }
+    },
+    
+
+  /*----------------------------*/
+
+
+  "flex-layout.row#btn-wishList":{
+    "children":["add-to-list-btn"],
+    "props":{
+      "blockClass":"row-wishlist"
+    }
+  },
+
   "flex-layout.col#productRating": {
     "props": {
       "blockClass": "productRating"
@@ -21,16 +89,24 @@
   "stack-layout#prodsum": {
     "children": [
       "product-summary-image#shelf",
-      "vtex.product-highlights@2.x:product-highlights#collection",
-      "modal-trigger#quickview" // Check quickview.jsonc
+      /* "vtex.product-highlights@2.x:product-highlights#collection", */
+      "modal-trigger#quickview"
+      /* "last-unit#product-summary" */
     ]
+  },
+
+  "last-unit#product-summary":{
+    "props":{
+      "blockClass":"stack"
+    }
   },
 
   "product-summary-image#shelf": {
     "props": {
       "showBadge": false,
       "aspectRatio": "1:1",
-      "maxHeight": 300
+      "maxHeight": 300,
+      "blockClass":"img-summary"
     }
   },
 
@@ -40,51 +116,100 @@
     },
     "children": ["product-highlight-wrapper"]
   },
+
   "product-highlight-wrapper": {
     "props": {
       "blockClass": "collection"
     },
-    "children": ["product-highlight-text"]
+    "children": ["last-unit#product-summary"]
   },
+
   "product-highlight-text": {
     "props": {
-      "message": "{highlightName}"
+      "message": "{highlightName}",
+      "blockClass":"stack"
     }
   },
 
-  "product-list-price#summary": {
-    "props": {
-      "blockClass": "summary"
-    }
-  },
   "flex-layout.row#selling-price-savings": {
     "props": {
-      "colGap": 2,
+      "colGap": 3,
       "preserveLayoutOnMobile": true,
       "preventHorizontalStretch": true,
-      "marginBottom": 4
+      "marginBottom": 4,
+      "blockClass":"row-price"
     },
     "children": [
       "product-selling-price#summary",
       "product-price-savings#summary"
     ]
   },
+
   "product-installments#summary": {
     "props": {
       "blockClass": "summary"
     }
   },
-  "product-selling-price#summary": {
-    "props": {
-      "blockClass": "summary"
+
+
+  /* ------------------------------------------ */
+  /* BUTTON BUY AND QUANTITY */
+  
+  "flex-layout.row#btn-prod":{
+    "children":[
+      "flex-layout.col#btn-quantity",
+      "flex-layout.col#buy-button"
+    ],
+    "props":{
+      "maxHeight":30,
+      "marginTop":"10px",
+      "blockClass":"row-buttons"
     }
   },
-  "product-price-savings#summary": {
+
+  "flex-layout.col#buy-button":{
+    "children": ["add-to-cart-button#buyButton"],
     "props": {
-      "markers": [
-        "discount"
-      ],
-      "blockClass": "summary"
+      "blockClass": "buy-button"
     }
+  },
+
+  "flex-layout.col#btn-quantity":{
+    "children":["product-summary-quantity#quantityButton"],
+    "props":{
+      "blockClass":"col-quantity"
+    }
+  },
+
+  
+  "add-to-cart-button#buyButton":{
+    "props":{
+      "text":"Comprar"
+    }
+  },
+
+  "product-summary-quantity#quantityButton": {
+    "props": {
+      "showUnit": true,
+      "showLabel": false,
+      "size":"small",
+      "blockClass":"btn-quantity"
+    }
+  },
+   /* ------------------------------------------ */
+
+  /* --------------------------- */
+  /* FECHA DE VENICMIENTO */
+  "training-app#fv":{
+    "props":{
+      "name": "Fecha de vencimiento",
+      "blockClass":"fv-summary"
+    }
+  },
+
+  "flex-layout.row#row-fv":{
+    "children":["training-app#fv"]
   }
+
+  /* --------------------------- */
 }

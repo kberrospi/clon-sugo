@@ -3,12 +3,8 @@
     "children": [
       "flex-layout.row#product-breadcrumb",
       "condition-layout.product#availability",
-      "flex-layout.row#description",
-      "flex-layout.row#specifications-title",
-      "product-specification-group#table",
       "shelf.relatedProducts",
-      "product-reviews",
-      "product-questions-and-answers"
+      "flex-layout.row#form"
     ]
   },
   "flex-layout.row#specifications-title": {
@@ -49,7 +45,8 @@
       "marginTop": 4,
       "marginBottom": 7,
       "paddingTop": 7,
-      "paddingBottom": 7
+      "paddingBottom": 7,
+      "blockClass":"wrapper-product"
     },
     "children": ["flex-layout.col#stack", "flex-layout.col#right-col"]
   },
@@ -77,7 +74,7 @@
   "flex-layout.col#stack": {
     "children": ["stack-layout"],
     "props": {
-      "width": "60%",
+      "width": "45%",
       "rowGap": 0
     }
   },
@@ -93,33 +90,108 @@
       "displayThumbnailsArrows": true
     }
   },
+
   "flex-layout.col#right-col": {
     "props": {
       "preventVerticalStretch": true,
-      "rowGap": 0
+      "preventHorizontalStretch": true,
+      "rowGap": 0,
+      "width":"45%",
+      "blockClass":"wrapper-name-buy"
     },
     "children": [
+      "last-unit#prod",
+      "flex-layout.row#btn-wishlist",
       "flex-layout.row#product-name",
-      "product-rating-summary",
-      "flex-layout.row#list-price-savings",
-      "flex-layout.row#selling-price",
-      "product-installments",
+      "training-app#vencimiento",
+      "product-description",
+      "flex-layout.row#price-row",
+      /* "product-installments",
       "product-separator",
-      "product-identifier.product",
-      "sku-selector",
-      "product-quantity",
-      "product-assembly-options",
-      "product-gifts",
-      "flex-layout.row#buy-button",
-      "availability-subscriber",
+      "product-identifier.product", */
+     /*  "sku-selector", */
+     /*  "product-assembly-options",
+      "product-gifts", */
+      "flex-layout.row#buy-btn-prod"
+      /* "availability-subscriber",
       "shipping-simulator",
-      "share#default"
+      "share#default" */
     ]
+  },
+
+  "flex-layout.row#btn-wishlist":{
+    "props":{
+      "blockClass":"btn-wishlist"
+    },
+    "children":["add-to-list-btn"]
+  },
+
+  /* --------------------------------------- */
+    /* ROW PRICE */
+
+  "flex-layout.row#price-row":{
+    "children":["flex-layout.col#price-col1", "flex-layout.col#price-col2"],
+    "props":{
+      "blockClass":"wrapper-content-price"
+    }
+  },
+
+  "flex-layout.col#price-col1":{
+    "children":[
+      "product-list-price",
+      /* "product-price-savings#save", */
+      "product-selling-price#price-value",
+      "training-app#pum"
+    ],
+    "props":{
+      "blockClass":"price-col1"
+    }
+  },
+
+  "product-selling-price#price-value":{
+    "props":{
+      "blockClass":"price-value"
+    }
+  },
+
+  "flex-layout.col#price-col2":{
+    "children":["product-price-savings#save"],
+    "props":{
+      "width":"auto"
+    }
+  },
+
+  "product-price-savings#save":{
+    "props":{
+      "markers": ["discount"],
+      "message": "{savingsPercentage}",
+      "blockClass":"price-saving"
+    }
+  },
+
+  /* --------------------------------------- */
+
+  "product-description":{
+    "props":{
+      "showTitle":false
+    }
+  },
+
+  "flex-layout.col#col-prod":{
+    "children":["last-unit#prod"]
+  },
+
+  "last-unit#prod":{
+   
+   "props":{
+     "blockClass":"inside-prod"
+   }
   },
 
   "flex-layout.row#product-name": {
     "props": {
-      "marginBottom": 3
+      "marginBottom": 3,
+      "blockClass":"name-product"
     },
     "children": ["vtex.store-components:product-name"]
   },
@@ -130,15 +202,55 @@
       "showValueNameForImageVariation": true
     }
   },
-
-  "flex-layout.row#buy-button": {
-    "props": {
-      "marginTop": 4,
-      "marginBottom": 7
-    },
-    "children": ["add-to-cart-button"]
+/* -------------------------------------------*/
+  /* BUY BUTTON & QUANTITY */
+  
+  "flex-layout.row#buy-btn-prod":{
+    "children":[
+      "flex-layout.col#col-btn-qa",
+      "flex-layout.col#col-buy-btn"
+    ],
+    "props":{
+      "blockClass":"btn-buy-prod"
+     
+    }
   },
 
+  "flex-layout.col#col-btn-qa":{
+    "children":["product-summary-quantity#btn-qa"],
+    "props":{
+      "paddingRight":5,
+      "blockClass":"col-btn-qa",
+      "width": "40%"
+    }
+  },
+  
+  "flex-layout.col#col-buy-btn":{
+    "children": ["add-to-cart-button#buy-btn"],
+    "props": {
+      "blockClass":"col-btn-buy",
+      "width":"60%"
+    }
+  },
+  
+  "add-to-cart-button#buy-btn":{
+    "props":{
+      "text":"Comprar",
+      "blockClass":"btn-buy"
+    }
+  },
+
+  "product-summary-quantity#btn-qa": {
+    "props": {
+      "showUnit": true,
+      "showLabel": false,
+      "size":"large",
+      "blockClass":"btn-qa"
+    }
+  },
+/* -----------------------------------------*/
+/*-------------------------------------------*/
+  /* AVIABILITY */
   "flex-layout.row#product-availability": {
     "props": {
       "colGap": 7,
@@ -170,15 +282,147 @@
     },
     "children": ["availability-subscriber"]
   },
+/*-------------------------------------------*/
+ 
+  /*------------------------*/
+   /* APPS EXTERNAS */
 
-  "share#default": {
+  "training-app#vencimiento":{
+    "props":{
+      "name": "Fecha de vencimiento",
+      "blockClass":"fv"
+    }
+  },
+  "training-app#pum":{
+    "props":{
+      "name": "CINCO",
+      "showTitle":false,
+      "blockClass":"pum"
+    }
+  },
+  /*------------------------*/
+
+  /*------------------------*/
+  /* FORMULARIO */
+
+  "flex-layout.row#form": {
+    "children": [
+      "flex-layout.col#form"
+    ]
+  },
+  "flex-layout.col#form": {
+    "children": [
+      "form"
+    ]
+  },
+  "form": {
+    "children":[
+      "flex-layout.row#row-form"
+    ],
+    "blocks":["form-success"],
     "props": {
-      "social": {
-        "Facebook": true,
-        "WhatsApp": true,
-        "Twitter": false,
-        "Pinterest": true
-      }
+      "entity": "EA",
+      "schema": "EquipoAlpha"
+    }
+  },
+
+  "flex-layout.row#row-form":{
+    "props":{
+      "blockClass":"form-masterData"
+    },
+    "children":[
+      "flex-layout.col#col-name",
+      "flex-layout.col#col-email",
+      "flex-layout.col#col-age",
+      "flex-layout.col#col-ig",
+      "flex-layout.col#col-submit"
+    ]
+  },
+
+  "flex-layout.col#col-name":{
+    "children":["form-input.text#name-form"],
+    "props":{
+      "blockClass":"input"
+    }
+  },
+
+  "form-input.text#name-form": {
+    "props": {
+      "label":"",
+      "pointer": "#/properties/name",
+      "placeholder":"Nombre"
+    }
+  },
+
+  "flex-layout.col#col-email":{
+    "children":["form-input.text#email-form"],
+    "props":{
+      "blockClass":"input"
+    }
+  },
+
+  "form-input.text#email-form": {
+    "props": {
+      "label":"",
+      "pointer": "#/properties/email",
+      "placeholder":"Correo"
+    }
+  },
+
+  "flex-layout.col#col-age":{
+    "children":["form-input.text#age-form"],
+    "props":{
+      "blockClass":"input"
+    }
+  },
+
+  "form-input.text#age-form": {
+    "props": {
+      "label":"",
+      "pointer": "#/properties/edad",
+      "placeholder":"Edad"
+    }
+  },
+
+  "flex-layout.col#col-ig":{
+    "children":["form-input.text#ig-form"],
+    "props":{
+      "blockClass":"input"
+    }
+  },
+
+  "form-input.text#ig-form": {
+    "props": {
+      "label":"",
+      "pointer": "#/properties/instagram",
+      "placeholder":"Instagram"
+    }
+  },
+
+  "flex-layout.col#col-submit":{
+    "children":["form-submit"]
+  },
+
+  "form-submit": {
+    "props": {
+      "label": "Enviar"
+    }
+  },
+
+  "form-success": {
+    "children": [
+      "rich-text#successSubmit"
+    ]
+  },
+
+  "rich-text#successSubmit": {
+    "props": {
+      "text": "Datos enviados con éxito",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass":"msg-succesfull"
     }
   }
+
+  /*------------------------*/
 }

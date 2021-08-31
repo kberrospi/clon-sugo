@@ -4,9 +4,7 @@
       "experimentalOptimizeRendering": true
     },
     "children": [
-      "menu-item#category-apparel",
-      "menu-item#category-home",
-      "menu-item#more"
+     
     ]
   },
   "menu-item#category-apparel": {
